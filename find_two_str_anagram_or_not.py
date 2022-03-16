@@ -21,4 +21,7 @@ def anagram(str1,str2):
 str1 = "silent"
 str2 = "listen"
 
-print(anagram(str1,str2))
+if anagram(str1,str2):
+	print(f"{str1} and {str2} is anagram of each other")
+else:
+	print(f"{str1} and {str2} is not anagram of each other")
