@@ -1,27 +1,29 @@
 
 
 def subarray(arr,n,gsum):
-	summ = 0
-	low =0
-	high =1
+	summ = arr[0]
+	start  =1
+	idx =1
 
-	while low <=n :
+	while idx <=n :
 
-		if summ < gsum :
-			summ +=arr[high]
-			high +=1
-		if summ > gsum:
-			print(summ)
-			summ -=arr[low]
-			low +=1
+		while summ > gsum and start < idx -1 :
+			# print(summ)
+			summ -=arr[start]
+			start +=1
 		if summ == gsum :
-			print(summ)
-			return low,high
+			# print(summ)
+			return start,idx -1
+
+		if idx < n:
+			summ += arr[idx]
+
+		idx +=1
 
 
-num = int(input())
+num = 8 #int(input())
 
-lis = list(map(int,input().split(" ")))
-summ = int(input())
+lis =[15,2,4,8,9,5,10,23] #list(map(int,input().split(" ")))
+summ = 23 # int(input())
 
 print(subarray(lis,num,summ))

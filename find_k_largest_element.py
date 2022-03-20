@@ -42,16 +42,16 @@ res = []
 i = 0
 for j in range(n-1,0,-1):
 
-	# if i == k :
-	# 	break
+	if i == k :
+		break
 
 	arr[j],arr[0] = arr[0],arr[j]
-	# res.append(arr[j])
+	res.append(arr[j])
 	heapify(arr,0,j)
 
-	# i +=1
+	i +=1
 
-print(arr)
+print(arr,res)
 
 
 
