@@ -14,8 +14,8 @@ root.left = Node(1)
 
 root.right = Node(1)
 
-root.left.right = Node(4)
-root.left.left = Node(1)
+root.left.right = Node(1)
+root.left.left = Node(5)
 
 
 def univalued_Btree(root,val):
