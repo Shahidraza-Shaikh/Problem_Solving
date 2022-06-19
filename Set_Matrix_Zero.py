@@ -12,6 +12,7 @@ for i in range(len(matrix)):
 			idx = i-1
 
 			while idx>=0:
+				print(idx)
 
 				if matrix[idx][j] != 0:
 

@@ -16,8 +16,8 @@ def even_diff(arr):
 
 		if abs(arr[i-1]-arr[i])&1 and abs(arr[i]-arr[i+1])&1:
 			count +=1
-			continue
-		else:
+			# continue
+		elif abs(arr[i-1]-arr[i])&1 == and :
 			count +=1
 
 

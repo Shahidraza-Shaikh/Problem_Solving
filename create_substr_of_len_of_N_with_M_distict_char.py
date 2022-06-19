@@ -53,7 +53,7 @@ def function(N,M):
 
 	print(strr)
 
-print(function(N,M))
+# print(function(N,M))
 
 for _ in range(t):
 	N,M = map(int,input().split(' '))
