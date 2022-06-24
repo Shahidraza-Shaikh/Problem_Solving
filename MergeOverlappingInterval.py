@@ -1,5 +1,7 @@
 # Question  https://www.geeksforgeeks.org/merging-intervals/
 
+'''
+
 def MergeOverlapInterval(interval):
 
 	interval.sort()
@@ -18,9 +20,29 @@ def MergeOverlapInterval(interval):
 			stack.append(i)
 
 	return stack
+'''
 
-interval = [[1,3],[2,4],[6,8],[9,10]]
-# interval = [[6,8],[1,9],[2,4],[4,7]]
+
+def MergeOverlapInterval(interval):
+
+	interval.sort()
+	index = 0 
+
+	for i in range(1,len(interval)):
+
+		if interval[index][1] >= interval[i][0] :
+
+			interval[index][1] = max(interval[index][1],interval[i][1])
+		else:
+
+			index +=1
+
+			interval[index] = interval[i]
+
+	return interval[:index+1]
+
+# interval = [[1,3],[2,4],[6,8],[9,10]]
+interval = [[6,8],[1,9],[2,4],[4,7]]
 
 res = MergeOverlapInterval(interval)
 
