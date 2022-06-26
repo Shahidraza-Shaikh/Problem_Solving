@@ -1,6 +1,7 @@
 # Question  https://www.geeksforgeeks.org/merging-intervals/
 
 '''
+TC - O(n) SC 
 
 def MergeOverlapInterval(interval):
 
@@ -22,6 +23,7 @@ def MergeOverlapInterval(interval):
 	return stack
 '''
 
+# TC - O(n) SP - O(1)
 
 def MergeOverlapInterval(interval):
 
