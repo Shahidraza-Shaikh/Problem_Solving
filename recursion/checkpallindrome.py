@@ -1,19 +1,18 @@
 
 
-def isPallindrome(i,str1,n):
+def isPallindrome(i,str1):
 
-	if i >= n/2:
+	if i >= len(str1)/2:
 		return True
 
-	if str1[i] != str1[n-i-1]:
-		print(str1[i],str1[n-i-1])
+	if str1[i] != str1[len(str1)-i-1]:
 		return False
 
-	return isPallindrome(i+1,str1,n)
+	return isPallindrome(i+1,str1)
 
-str1 = "MADAM"
+str1 = "MADAMA"
 
-if isPallindrome(0,str1,len(str1)) == True:
+if isPallindrome(0,str1) == True:
 	print(str1, "is  a Pallindrome")
 
 else:
