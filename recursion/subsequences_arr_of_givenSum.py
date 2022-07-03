@@ -68,19 +68,21 @@ def genSubSeq(arr,i,s,summ):
 		else:
 			return 0
 
-	s +=arr[i]
-	temp_arr.append(arr[i])
+	s += arr[i]
+
+	# temp_arr.append(arr[i])
 
 	left = genSubSeq(arr,i+1,s,summ)
 
 	s -= arr[i]
+
 	right = genSubSeq(arr,i+1,s,summ)
 
 	return left + right
 
 arr = [1,2,1,3,4]
 
-summ = 11
+summ = 7
 temp_arr = []
 count = genSubSeq(arr,0,0,summ)
 
