@@ -17,7 +17,7 @@ def combination(idx,arr,target,comb,ans):
 		comb.pop()
 
 	return ans
-arr = [1,1,1,2,2]
+arr = [2,1,2,1,1,1,1]
 target = 4
-res = combination(0,arr,target,[],[])
+res = combination(0,sorted(arr),target,[],set())
 print(res)
