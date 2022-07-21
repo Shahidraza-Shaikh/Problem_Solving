@@ -32,6 +32,37 @@ def preOrder(root,ans):
 	preOrder(root.left,ans)
 	preOrder(root.right,ans)
 
-ans = []
-preOrder(root,ans)
-print(ans)
+pre = []
+preOrder(root,pre)
+print("pre-Order ",pre)
+
+def inOrder(root,ans):
+
+	if root == None:
+		return
+
+	inOrder(root.left,ans)
+	ans.append(root.data)
+
+	inOrder(root.right,ans)
+
+inOrd = []
+
+inOrder(root,inOrd)
+print("in-order",inOrd)
+
+def PostOrder(root,ans):
+
+	if root == None:
+
+		return 
+	PostOrder(root.left,ans)
+
+	PostOrder(root.right,ans)
+
+	ans.append(root.data)
+
+porder = []
+
+PostOrder(root,porder)
+print("Posr-Order",porder)
