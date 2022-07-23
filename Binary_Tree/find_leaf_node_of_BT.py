@@ -19,16 +19,20 @@ root.left.right = Node(40)
 root.right.left = Node(35)
 root.right.right = Node(33)
 
-# root.right.right.right = Node(46)
+root.right.right.right = Node(46)
 
-Sum of leaf nodes 
+# Sum of leaf nodes 
+print(root.right.right.right.data)
 
 def countLeafNode(root,ans):
+
+	if root == None:
+		return 
 
 	if root.left == None and root.right == None:
 
 		ans[0] += root.data
-		# print(root.data,ans[0])
+		print(root.data,ans[0])
 
 		return
 
