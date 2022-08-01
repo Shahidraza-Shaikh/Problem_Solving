@@ -21,15 +21,18 @@ root1.left.right.left = Node(4)
 
 def Invert_BT(root):
 
-	if root != None:
+	if root == None:
 		return root
 
-	root2 = Node(root.data)
+	# root2 = Node(root.data)
 
-	root2.left = Invert_BT(root.left)
+	left = Invert_BT(root.right)
 
-	root2.right = Invert_BT(root.right)
+	right = Invert_BT(root.left)
 
-	return root2
+	root.left = left
+	root.right = right
 
-print(Invert_BT(root1).left.left.data)
+	return root
+
+print(Invert_BT(root1).left.right.left)
