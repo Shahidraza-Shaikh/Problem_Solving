@@ -35,10 +35,14 @@ def Dont_have_sib(root,res):
 
 	if root.left != None :
 		res.append(root.left.data)
-		Dont_have_sib(root.left)
+		Dont_have_sib(root.left,res)
 
 	if root.right != None :
 
-		print(root.right.date)
-		Dont_have_sib(root.right)
+		# print(root.right.data)
+		Dont_have_sib(root.right,res)
 
+res = []
+Dont_have_sib(root1,res)
+
+print(res)
