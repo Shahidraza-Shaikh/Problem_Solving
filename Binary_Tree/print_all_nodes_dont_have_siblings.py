@@ -19,7 +19,7 @@ root1.left.right = Node(2)
 root1.left.right.left = Node(4)
 
 
-def Dont_have_sib(root):
+def Dont_have_sib(root,res):
 
 	if root == None:
 		return
@@ -28,10 +28,17 @@ def Dont_have_sib(root):
 
 		return
 
-	if root.left != None :
+	if root.left != None and root.right != None:
 
+		Dont_have_sib(root.left,res)
+		Dont_have_sib(root.right,res)
+
+	if root.left != None :
+		res.append(root.left.data)
 		Dont_have_sib(root.left)
 
 	if root.right != None :
 
+		print(root.right.date)
 		Dont_have_sib(root.right)
+
