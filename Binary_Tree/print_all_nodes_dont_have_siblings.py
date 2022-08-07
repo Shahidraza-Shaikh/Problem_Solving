@@ -6,6 +6,17 @@ class Node:
 		self.left = None
 		self.right = None
 
+        #   3
+        #   /  \
+
+        #  5    1
+        #  / \
+        # 6	  2	
+        #  \  /
+        #   1 4
+            # /
+           # 10
+
 
 root1 = Node(3)
 
@@ -17,6 +28,8 @@ root1.left.left.right = Node(1)
 
 root1.left.right = Node(2)
 root1.left.right.left = Node(4)
+
+root1.left.right.left.left = Node(10)
 
 
 def Dont_have_sib(root,res):
@@ -33,16 +46,17 @@ def Dont_have_sib(root,res):
 		Dont_have_sib(root.left,res)
 		Dont_have_sib(root.right,res)
 
-	if root.left != None :
+	elif root.left != None :
 		res.append(root.left.data)
 		Dont_have_sib(root.left,res)
 
-	if root.right != None :
+	elif root.right != None :
 
-		# print(root.right.data)
+		res.append(root.right.data)
 		Dont_have_sib(root.right,res)
+	return 
 
 res = []
 Dont_have_sib(root1,res)
 
-print(res)
+print(sorted(res))
