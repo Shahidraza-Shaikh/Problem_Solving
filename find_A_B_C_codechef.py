@@ -14,5 +14,7 @@ f = 0
 # 	if f == func[2]:
 # 		print(f)
 i,j,k,l = 0,0,0,0
-print(i,k)
 
+while i <=n or j <=n or k <=n or l <=n:
+
+	f =
